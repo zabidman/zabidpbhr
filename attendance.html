@@ -28,8 +28,8 @@
     </div>
 
 
-
-      <div id="attendance" style="color: white">
+<div id="main">
+      <div class="attendance" style="color: white">
         <h1 align="center">Employee Attendance</h1>
 <!-- search section -->
         <section class="search">
@@ -38,7 +38,7 @@
             <button type="button" name="button">Search</button>
           </header>
         </section>
-        
+
 <!-- attendance record section -->
         <section class="record">
           <table>
@@ -121,12 +121,15 @@
         </section>
 
       </div>
+</div>
 
-      <div id="footer">
-        <footer align="center">
-          Design by:- &nbsp ZABID
-        </footer>
-      </div>
+<div id="footer">
+  <footer id="zabid" align="center"></footer>
+
+  <script>
+    document.getElementById("zabid").innerHTML = "Design by:- &nbsp ZABID";
+  </script>
+</div>
 
     </div>
 

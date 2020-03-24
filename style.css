@@ -1,6 +1,11 @@
 
+a[href="index.html"]{
+  color: red !important;
+
+}
 /*Desktop view*/
 @media screen and (min-width:760px){
+
 html{
   background: url(landscapebg.jpg);
   background-repeat: no-repeat;
@@ -11,7 +16,7 @@ html{
   margin:0 auto;
 }
 
-#header header{
+#header  header{
   background:white;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -81,7 +86,7 @@ html{
 
 
 /*contact section*/
-#contact main{
+.contact main{
   background:rgba(88, 166, 144, 0.9);
   color: white;
   letter-spacing: 1px;
@@ -95,18 +100,18 @@ html{
   font-family: "century gothic";
 }
 
-#contact main h4{
+.contact main h4{
   color: white;
   letter-spacing: 1px;
   font-family: sans-serif;
 }
 
-#contact main h4 img{
+.contact main h4 img{
   width: 20px;
 }
 
 /*Attendance section*/
-#attendance{
+.attendance{
   background:rgba(88, 166, 144, 0.9);
   justify-content: center;
   align-items: center;
@@ -119,13 +124,13 @@ html{
   font-family: "century gothic";
 }
 
-#attendance h1{
+.attendance h1{
 color: white;
 letter-spacing: 1px;
 font-family: "century gothic";
 }
 
-#attendance .search{
+.attendance .search{
 float: left;
 background: rgba(225, 203, 154, 0.9);
 color: black;
@@ -136,20 +141,20 @@ margin-left: 30px;
 padding: 30px 20px 30px 20px;
 border-radius: 6px;
 }
-#attendance .search button{
+.attendance .search button{
 float: right;
 margin-right: 16px;
 margin-top: 20px;
 }
 
-#attendance .record{
+.attendance .record{
 float: right;
 background: white;
 }
-#attendance .record table {
+.attendance .record table {
 width: 500px;
 }
-#attendance .record table tr,td,th{
+.attendance .record table tr,td,th{
 justify-content: center;
 align-items:center;
 border: 1px;
@@ -158,7 +163,7 @@ border-style: groove;
 
 /*Leave application section*/
 
-#form{
+.form{
   background:rgba(88, 166, 144, 0.9);
   justify-content: center;
   align-items: center;
@@ -171,17 +176,17 @@ border-style: groove;
   font-family: "century gothic";
 }
 
-#form h1{
+.form h1{
 color: white;
 letter-spacing: 1px;
 font-family: "century gothic";
 }
 
-#form p{
+.form p{
 padding-left: 315px;
 }
 
-#form form{
+.form form{
 background: rgba(225, 203, 154, 0.9);
 color: black;
 font-family: "century gothic";
@@ -190,22 +195,22 @@ margin-left: 30px;
 padding: 30px 550px 30px 20px;
 border-radius: 6px;
 }
-#form form label{
+.form form label{
 padding-right: 2px;
 padding-bottom: 10px;
 margin: 20px 0px 20px 0px;
 width: 400px;
 }
-#form form input{
+.form form input{
 margin-bottom: 10px;
 }
-#form form br{
+.form form br{
 padding: 5px 5px 5px 5px;
 }
 
 
 
-#about main{
+.about + main{
   background:rgba(88, 166, 144, 0.9);
   color: white;
   letter-spacing: 1px;
@@ -228,9 +233,22 @@ padding: 5px 5px 5px 5px;
     text-align: center;
   }
 
-  .content {
-    background: rgba(255,255,255,0.2);
-    padding: 30px;
+  .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-areas:
+      "header header header header"
+      "navbar navbar navbar navbar"
+      "main main main main"
+      "footer footer footer footer"
+
+  }
+  .content > *{
+    background: rgba(255,255,255,0.4);
   }
 
   #header{
@@ -251,6 +269,8 @@ padding: 5px 5px 5px 5px;
   }
   #navbar nav ul li{
   padding: 10px 0px 10px 0px;
+  transform: skewY(4deg) !important;
+
   }
   #navbar nav ul li a{
     grid-area: navbar;
@@ -258,7 +278,6 @@ padding: 5px 5px 5px 5px;
     color: white;
     transition: .4s;
     text-decoration: none;
-
   }
   #navbar nav ul li:hover{
     background: black;
@@ -267,15 +286,15 @@ padding: 5px 5px 5px 5px;
 
   #main{
     grid-area: main;
-    background:rgba(88, 166, 144, 0.4);
+    background:rgba(88, 166, 144, 0.4) !important;
     color: white;
     letter-spacing: 1px;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 10px;
     font-family: "century gothic";
   }
@@ -286,13 +305,14 @@ padding: 5px 5px 5px 5px;
     font-size: 16px;
   }
   #footer{
+    grid-area:footer;
     background: #E1B975;
     font-family: "century gothic";
     letter-spacing: 3px;
-
+    padding-top: 37px;
   }
 
-  #attendance{
+  .attendance{
     grid-area: attendance;
   }
 
@@ -300,36 +320,36 @@ padding: 5px 5px 5px 5px;
     grid-area: form;
   }
 
-  #Contact{
-    grid-area: contact;
-  }
-  #contact main{
-    background:rgba(88, 166, 144, 0.9);
+
+  #main .contact{
     color: white;
     letter-spacing: 1px;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 10px;
-    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
     font-family: "century gothic";
   }
-  #contact main h4{
+  .contact main h4{
     text-align: left;
     color: white;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: 14px;
   }
-  #contact main h4 img{
+  .contact main h4 img{
     width: 20px;
   }
 
   #about{
     grid-area: about;
-    background:rgba(88, 166, 144, 0.4);
+  }
+  #about main{
+    grid-area: about;
+    background:rgba(88, 166, 144, 0.4) !important;
     color: white;
     letter-spacing: 1px;
     padding-top: 50px;
@@ -341,14 +361,3 @@ padding: 5px 5px 5px 5px;
     font-size: 14px;
   }
   }
-
-
-
-
-
-
-
-
-
-
-}

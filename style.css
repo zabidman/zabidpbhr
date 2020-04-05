@@ -74,7 +74,29 @@ html{
   margin-bottom: 10px;
   font-family: "century gothic";
 }
+#main main .hrc{
+  color:#EC5E64;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 15px;
+  animation: text 3s 1;
+}
+@keyframes text {
+  0%{
+    color: rgba(88, 166, 144, 0.9);
+    margin-top: -60px;
+    letter-spacing: -15px;
+  }
+  30%{
+    color: black;
+    margin-top: 0px;
+    letter-spacing: -5px;
+  }
+  70%{
+    color: black;
+  }
 
+}
 
 #footer footer{
   background: #E1B975;
@@ -86,7 +108,7 @@ html{
 
 
 /*contact section*/
-#main .contact main{
+.contact main{
   background:rgba(88, 166, 144, 0.9);
   color: white;
   letter-spacing: 1px;
@@ -100,7 +122,7 @@ html{
   font-family: "century gothic";
 }
 
-#main .contact main h4{
+.contact main h4{
   color: white;
   letter-spacing: 1px;
   font-family: sans-serif;
@@ -111,7 +133,7 @@ html{
 }
 
 /*Attendance section*/
-#main .attendance{
+.attendance{
   background:rgba(88, 166, 144, 0.9);
   justify-content: center;
   align-items: center;
@@ -124,13 +146,13 @@ html{
   font-family: "century gothic";
 }
 
-#main .attendance h1{
+.attendance h1{
 color: white;
 letter-spacing: 1px;
 font-family: "century gothic";
 }
 
-#main .attendance .search{
+.attendance .search{
 float: left;
 background: rgba(225, 203, 154, 0.9);
 color: black;
@@ -141,20 +163,20 @@ margin-left: 30px;
 padding: 30px 20px 30px 20px;
 border-radius: 6px;
 }
-#main .attendance .search button{
+.attendance .search button{
 float: right;
 margin-right: 16px;
 margin-top: 20px;
 }
 
-#main .attendance .record{
+.attendance .record{
 float: right;
 background: white;
 }
-#main .attendance .record table {
+.attendance .record table {
 width: 500px;
 }
-#main .attendance .record table tr,td,th{
+.attendance .record table tr,td,th{
 justify-content: center;
 align-items:center;
 border: 1px;
@@ -163,7 +185,7 @@ border-style: groove;
 
 /*Leave application section*/
 
-#main .form{
+.form{
   background:rgba(88, 166, 144, 0.9);
   justify-content: center;
   align-items: center;
@@ -176,17 +198,17 @@ border-style: groove;
   font-family: "century gothic";
 }
 
-#main .form h1{
+.form h1{
 color: white;
 letter-spacing: 1px;
 font-family: "century gothic";
 }
 
-#main .form p{
+.form p{
 padding-left: 315px;
 }
 
-#main .form form{
+.form form{
 background: rgba(225, 203, 154, 0.9);
 color: black;
 font-family: "century gothic";
@@ -195,22 +217,22 @@ margin-left: 30px;
 padding: 30px 550px 30px 20px;
 border-radius: 6px;
 }
-#main .form form label{
+.form form label{
 padding-right: 2px;
 padding-bottom: 10px;
 margin: 20px 0px 20px 0px;
 width: 400px;
 }
-#main .form form input{
+.form form input{
 margin-bottom: 10px;
 }
-#main .form form br{
+.form form br{
 padding: 5px 5px 5px 5px;
 }
 
 
 
-#main .about + main{
+.about + main{
   background:rgba(88, 166, 144, 0.9);
   color: white;
   letter-spacing: 1px;
@@ -233,7 +255,7 @@ padding: 5px 5px 5px 5px;
     text-align: center;
   }
 
- .content{
+  .content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -312,7 +334,7 @@ padding: 5px 5px 5px 5px;
     padding-top: 37px;
   }
 
- #main .attendance{
+  .attendance{
     grid-area: attendance;
   }
 
@@ -333,14 +355,14 @@ padding: 5px 5px 5px 5px;
     margin-bottom: 0px;
     font-family: "century gothic";
   }
-  #main .contact main h4{
+  .contact main h4{
     text-align: left;
     color: white;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: 14px;
   }
-  #main .contact main h4 img{
+  .contact main h4 img{
     width: 20px;
   }
 

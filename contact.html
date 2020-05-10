@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Human Resource Center</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="content">
+
+    <div id="header">
+      <header align="center">
+        <img src="pblogo1.png" class="logo">
+      </header>
+    </div>
+
+    <div id="navbar">
+      <nav align="center">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+          <li><a href="leaveapplication.html">Leave application</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<!-- contact section -->
+    <div id="main">
+    <div class="contact" align="center">
+      <h1 align="center">Contact Us</h1>
+
+
+      <form action="" method="">
+        <label>Name:</label>
+        <br>
+        <input type="text" placeholder="Name , 4 to 20 characters only." pattern="[A-Za-z]{4,20}" required>
+        <br>
+        <label>IC Number:</label>
+        <br>
+        <input type="text" required placeholder="IC Number: XX-XXXXXX" pattern="[0|3|5]{1}[0-1]{1}-[0-9]{6}" required>
+        <br>
+        <label>Phone Number:</label>
+        <br>
+        <input type="text" required placeholder="(+673)" pattern="+673[7-8]{1}[0-9]{6}" required>
+        <br>
+        <label>Email Address:</label>
+        <br>
+        <input type="text" required placeholder="YourEmail@email.com" required>
+        <br>
+        <label>Enquiries:</label>
+        <br>
+        <textarea  rows="4" cols="70" placeholder="Any enquiries please type here"></textarea>
+        <input type="submit" value="SUBMIT"></button>
+           <h5> <b>Any enquiries will be reply through email</b></h5>
+           </form>
+
+    </div>
+    </div>
+
+    <div id="footer">
+      <footer id="zabid" align="center">
+
+      <script>
+        document.getElementById("zabid").innerHTML = "Design by:- &nbsp ZABID";
+      </script>
+      </footer>
+    </div>
+
+  </body>
+</html>
